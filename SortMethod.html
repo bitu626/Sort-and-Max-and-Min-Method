@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr=[12,10,56,45,50];
+        function max()
+        {
+           var max=arr[0];
+            for(let i=1;i<arr.length;i++)
+            {
+                if(max<arr[i])
+                {
+                    max=arr[i];
+                }
+            }
+            document.write(max);
+        }
+        function min()
+        {
+            var min=arr[0];
+            for(let i=1;i<arr.length;i++)
+            {
+                if(min>arr[i])
+                {
+                    min=arr[i];
+                }
+            }
+            document.write(min);
+        }
+            function asort()
+        {
+            arr.sort(function(a,b){return a-b});
+            document.getElementById("demo2").innerHTML=arr;
+        }
+        function dsort()
+        {
+            arr.sort(function(a,b){return b-a});
+            document.getElementById("demo3").innerHTML=arr;
+        }
+    </script>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <button onclick="asort()">Sort in Aesc. Order</button>
+    <button onclick="dsort()">Sort in Des. Order</button>
+    <button onclick="max()">Max. Number</button>
+    <button onclick="min()">Min. Number</button>
+</body>
+</html>
